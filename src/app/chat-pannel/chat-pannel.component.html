@@ -1,67 +1,103 @@
+
+
 <div class="chat-window">
-    <div class="chats">
-    <div class="user-join">
-       <p><b></b>friday</p>
-    </div>
-  
-     <div class="allMessage"> 
-      <div class="visitor">
-         <span class="visitor-badge">U1</span>
-           </div>
-      <div class="messageContent">
-         <p>user1</p>
-      
-    <div class="message incoming">
-       <!-- <h5>user1</h5> -->
-       <p>Hello welcome to hippo</p>
+   <div class="chats">
+   <div class="user-join">
+      <p><b></b>friday</p>
+   </div>
+ 
+    <div class="allMessage"> 
+     <div class="visitor">
+        <span class="visitor-badge">U</span>
+          </div>
+     <div class="messageContent">
+        <p>user</p>
+     
+   <div class="message incoming">
+      <!-- <h5>user1</h5> -->
+      <p>Hello welcome to hippo</p>
+     </div>
+   </div>
+  </div> 
+
+  <div class="allMessage1"> 
+     <div class="visitor">
+        <span class="visitor-badge">C</span>
+          </div>
+     <div class="messageContent1">
+        <p>Customer</p>
+     
+   <div class="message outgoing">
+      <!-- <h5>user1</h5> -->
+      <p>Welcome tocheckin-billing3 Before we go ahead, Could you please share your email address, So that we can stay connected.</p>
+     </div>
+   </div>
+  </div> 
+
+ <!-- <div *ngFor="let current of userMsg">
+   let temp:sender={} as sender 
+     <div *ngif="(temp.userType=='user')">
+     <div class="message outgoing">
+        <h5>user2</h5>
+        <p>{{current}}</p>
       </div>
     </div>
-   </div> 
 
+    <div *ngif="temp.userType=='customer'">
+     <div class="message incoming">
+     <h5>user2</h5>
+     <p>{{current1}}</p>
+  </div>
+  </div>
+</div> 
+ </div> -->
+
+ <div *ngFor="let current of messageArr">
+   <div *ngIf="current.userType=='user'">
+      <div class="allMessage"> 
+         <div class="visitor">
+            <span class="visitor-badge">U</span>
+              </div>
+         <div class="messageContent">
+            <p>user</p>
+         
+       <div class="message incoming">
+          <!-- <h5>user1</h5> -->
+          <p>{{current.message}}</p>
+         </div>
+       </div>
+      </div> 
+</div>
+
+<div *ngIf="(current.userType=='customer')">
    <div class="allMessage1"> 
       <div class="visitor">
-         <span class="visitor-badge">U2</span>
+         <span class="visitor-badge">C</span>
            </div>
       <div class="messageContent1">
-         <p>user1</p>
+         <p>Customer</p>
       
     <div class="message outgoing">
        <!-- <h5>user1</h5> -->
-       <p>Welcome tocheckin-billing3 Before we go ahead, Could you please share your email address, So that we can stay connected.</p>
+       <p>{{current.message}}</p>
       </div>
     </div>
    </div> 
+    </div>
+ </div>
 
-    <!-- <div class="message outgoing">
-       <h5>user2</h5>
-       <p>Welcome tocheckin-billing3 Before we go ahead, Could you please share your email address, So that we can stay connected.</p>
-    </div> -->
-    <!-- let temp:sender={} as sender 
-    let msgArr=temp.messageArray -->
-  <div *ngFor="let current of ">
+ 
+ </div>
+ <!-- </div> -->
+ <div class="users-window">
+ 
       
-      <div class="message outgoing">
-         <h5>user2</h5>
-         <p>{{current}}</p>
-      </div>
-  
-  </div>
-  <!-- <div *ngFor="let current1 of customerMsg">
-   
-   <div class="message incoming">
-      <h5>user2</h5>
-      <p>{{current1}}</p>
-   </div>
+       <div class="user-input">
+           <input #myinput type="text" placeholder="Type a message">
+           <button (click)="userChat(myinput.value)">User</button>
+           <button (click)="customerChat(myinput.value)">Customer</button>
+         </div>
+        
+</div>
+</div>           
 
-</div> -->
-</div>
-  <div class="users-window">
-  
-       
-        <div class="user-input">
-            <input #myinput type="text" placeholder="Type a message">
-            <button (click)="userChat(myinput.value)">User</button>
-            <button (click)="customerChat(myinput.value)">Customer</button>
-          </div>
-         
-</div>
