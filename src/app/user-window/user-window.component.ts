@@ -20,6 +20,6 @@ ngOnInit()
 selectUser(key:number)
 {
   this.chats.chatid=key;
-  console.log(key);
+  console.log(this.chats.chatid);
 }
 }

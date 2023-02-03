@@ -22,6 +22,7 @@ box-shadow: 0 2px 4px 0 rgb(0 0 0 / 6%);
 }
 .sub{
     width:30%;
+    text-align: center;
     /* border-right: 1px solid grey; */
     /* height: 20% */
 }
@@ -35,7 +36,7 @@ box-shadow: 0 2px 4px 0 rgb(0 0 0 / 6%);
     align-items: center;
     justify-content: flex-start;
 }
-.visitor{
+/* .visitor{
     
     border-radius: 50px;
     background-color: rgb(124, 124, 15);
@@ -43,12 +44,21 @@ box-shadow: 0 2px 4px 0 rgb(0 0 0 / 6%);
     width: 35px;
     aspect-ratio: 1;
     margin: 2px;
+} */
+.visitors{
+    display: flex;
 }
 .visitor-badge{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
+    border-radius: 50px;
+    background-color: rgb(124, 124, 15);
+    color: white;
+    width: 35px;
+    aspect-ratio: 1;
+    margin: 2px;
 }
 .vis1{
     display: flex;
@@ -70,6 +80,8 @@ box-shadow: 0 2px 4px 0 rgb(0 0 0 / 6%);
 .start-chat{
     padding: 5px;
     min-width: fit-content;
+    background-color:#16449b;
+    color:white;
 }
 .icons{
     margin: 10px;

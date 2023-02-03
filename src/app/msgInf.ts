@@ -1,4 +1,4 @@
-import { sender } from "./user-window/sender"
+import { sender } from "./sender"
 export interface msgInf{
     // msgArr: any[]
     // sender: any[]

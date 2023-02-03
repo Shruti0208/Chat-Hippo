@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { timestamp } from 'rxjs';
 import { msgInf } from './msgInf';
-import { sender } from './user-window/sender';
+import { sender } from './sender';
 @Injectable({
   providedIn: 'root'
 })
@@ -27,6 +27,7 @@ let currentSender:sender={} as sender;
 curMsg.key=this.keyNum;
 curMsg.username=name;
 this.curDate=new Date();
+
 
 currentSender.time=this.curDate;
 currentSender.userType=("A");

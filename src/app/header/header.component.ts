@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { msgInf } from '../msgInf';
+import { sender } from '../sender';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -8,6 +9,7 @@ import { msgInf } from '../msgInf';
 })
 export class HeaderComponent {
   public chatsArr:msgInf[]=[];
+ 
   constructor(public data:DataService)
   {
     
@@ -16,9 +18,12 @@ initiateChat(name:string)
 {
   // console.log("init cchat");
   this.data.store(name);
+  
 }
+
 ngOnInit()
 {
   this.chatsArr=this.data.msgArr;
+  
 }
 }

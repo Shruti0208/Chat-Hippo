@@ -29,3 +29,15 @@
     justify-content: flex-start;
     margin: 10px;
 }
+.combine-user{
+    display: flex;
+    flex-direction: column;
+    line-height: 90%;
+}
+.small-text{
+    font-size: 12px;
+}
+.msgnum:hover{
+    background-color: rgb(244, 244, 228);
+    line-height: 20%;
+}

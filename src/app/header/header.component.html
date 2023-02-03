@@ -82,14 +82,20 @@
 </svg>
 </div>
     </div>
+   
     <div class="title">
-       <!-- <img id="main-nav-logo" src="assets/images/logo-white-small.svg"> -->
-       <div class="visitor">
-          <span class="visitor-badge">V</span>
-       </div>
-       <h1>Visitor</h1>
+      <div  *ngIf="(data.chatid>=0)">
+       
+         <div class="visitors">
+          <span class="visitor-badge">{{data.msgArr[data.chatid].username[0]}}</span>
+        
+          <h1>{{data.msgArr[data.chatid].username}}</h1>
+        </div>
+      </div>
+      
     
-    </div>    
+    </div> 
+  <!-- </div>    -->
  </div>  
    
     <div class="sub">
